@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-const Wrapper = styled.main`
+export const Wrapper = styled.main`
   nav {
     width: var(--fluid-width);
     max-width: var(--max-width);
@@ -10,10 +10,10 @@ const Wrapper = styled.main`
     align-items: center;
   }
   .page {
-    min-height: calc(100vh - var(--nav-height));
+    min-height: calc(100vh, var(--nav-height));
     display: grid;
     align-items: center;
-    margin-top: -3rem;
+    margin-top: 7rem;
   }
   h1 {
     font-weight: 700;
@@ -36,5 +36,4 @@ const Wrapper = styled.main`
       display: block;
     }
   }
-`
-export default Wrapper
+`;
