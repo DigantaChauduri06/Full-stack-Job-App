@@ -1,14 +1,17 @@
-import { Wrapper } from "../assets/css/Wrapper";
+// Styles
+import { Wrapper } from "../../assets/css/LandingPage";
+import { motion, AnimatePresence } from "framer-motion";
 // Logos
-import logo from "../assets/images/logo.svg";
-import main from "../assets/images/main.svg";
+import main from "../../assets/images/main.svg";
+import { Logo } from "../index";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
     <Wrapper>
       {/* Navbar */}
       <nav>
-        <img src={logo} alt="" />
+        <Logo />
       </nav>
       <div className="container page">
         <div className="info">
@@ -23,7 +26,9 @@ const Landing = () => {
             photo booth jean shorts pabst enamel pin brunch air plant. Enamel
             pin hexagon raw denim migas dreamcatcher.
           </p>
-          <button className="btn btn-hero">Login / Register</button>
+          <Link className="btn btn-hero" to="/register">
+            Login / Register
+          </Link>
         </div>
         <img src={main} alt="" className="img main-img" />
       </div>

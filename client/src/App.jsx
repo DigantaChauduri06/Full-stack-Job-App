@@ -1,14 +1,16 @@
-import { useState } from "react";
-import Landing from "./pages/Landing";
-import styled from "styled-components";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Dashboard, Register, Error, Landing } from "./components/index";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="App">
-      <Landing />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Dashboard />} path="/" />
+        <Route element={<Register />} path="/register" />
+        <Route element={<Landing />} path="/landing" />
+        <Route element={<Error />} path="*" />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
